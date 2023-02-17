@@ -1,0 +1,9 @@
+gcc LinkedList.h LinkedList.c LinkedListTest.c log.h log.c -o linkedlist
+niveis de log:
+Debug
+Trace
+Info
+Warning
+Error
+
+./linkedlist
