@@ -18,9 +18,11 @@ int main() {
 	numero = malloc(sizeof(int));
 	*numero = 20;
 	enqueue(&lista, numero);
-    printf("%d\n", *((int*)dequeue(&lista)));
-    printf("%d\n", *((int*)dequeue(&lista)));
-    dequeue(&lista);
+	first(&lista);
+    //printf("%d\n", *((int*)dequeue(&lista)));
+    //printf("%d\n", *((int*)dequeue(&lista)));
+    //dequeue(&lista);
+
 				
 
 	return EXIT_SUCCESS;
