@@ -65,7 +65,7 @@ void* dequeue(LinkedList *list) {
 }
 
 void* first(LinkedList *list) {
-	log_info("Retornando o elemento dado da lista");
+	log_info("Retornando o primeiro elemento da lista");
 	log_trace("first ->");
 	if (isEmpty(list)) {
 		log_warn("Não há elementos na lista para retornar o primeiro dado");
@@ -78,23 +78,42 @@ void* first(LinkedList *list) {
 }
 
 void* last(LinkedList *list) {
-	log_info("Retornando o primeiro elemento da lista");
+	log_info("Retornando o último elemento da lista");
 	log_trace("last ->");
 	void *data = NULL;
 	if (!isEmpty(list)) {
 		Node *aux = list->first;
 		log_debug("(*aux, list->first): (%p, %p)", aux, list->first);
-		while (aux->next !NULL){
+		while (aux->next != NULL){
 			aux = aux->next;
 		}
 	data = aux->data;
 	log_debug("(data, aux->data): (%p, %p)", data, aux->data);
 	}
+	log_debug("Endereço do último dado: %p", data);
+	log_trace("last <-");
 	return data;
 }
 
 int push(LinkedList *list, void *data) {
-	return 0;
+	log_info("Inserindo no topo da pilha");
+	log_trace("push ->");
+	Node *newNode = (Node*) malloc(sizeof(Node));
+	if (newNode==NULL) {
+		
+		return -1;}
+	newNode->data = data;
+	newNode->next = NULL;
+	if (isEmpty(list)){
+		list->first = newNode;
+	}
+	else{
+		newNode->next = list->first;
+		list->first = newNode;
+	}
+    list->size++;
+	log_trace("push <-");
+	return 1;
 }
 
 void* pop(LinkedList *list) {
