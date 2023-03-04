@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2023-03-02 14:54:43 INFO  LinkedList.c:7: Inicializando a lista
 2023-03-02 14:54:43 TRACE LinkedList.c:8: init ->
 2023-03-02 14:54:43 DEBUG LinkedList.c:11: list->first: (nil)
@@ -41,3 +42,47 @@
 2023-03-02 14:54:43 DEBUG LinkedList.c:91: (data, aux->data): (0x5568ddce9720, 0x5568ddce9720)
 2023-03-02 14:54:43 DEBUG LinkedList.c:93: Endereço do último dado: 0x5568ddce9720
 2023-03-02 14:54:43 TRACE LinkedList.c:94: last <-
+=======
+2023-02-26 17:23:01 INFO  LinkedList.c:7: Inicializando a lista
+2023-02-26 17:23:01 TRACE LinkedList.c:8: init ->
+2023-02-26 17:23:01 DEBUG LinkedList.c:11: list->first: (nil)
+2023-02-26 17:23:01 DEBUG LinkedList.c:12: list->size: 0
+2023-02-26 17:23:01 TRACE LinkedList.c:13: init <-
+2023-02-26 17:23:01 INFO  LinkedList.c:17: Adicionando no final da fila
+2023-02-26 17:23:01 TRACE LinkedList.c:18: enqueue ->
+2023-02-26 17:23:01 INFO  LinkedList.c:110: Verificando se a lista está vazia
+2023-02-26 17:23:01 TRACE LinkedList.c:111: isEmpty ->
+2023-02-26 17:23:01 DEBUG LinkedList.c:117: list->size: 0
+2023-02-26 17:23:01 TRACE LinkedList.c:118: isEmpty <-
+2023-02-26 17:23:01 INFO  LinkedList.c:41: Dado inserido com sucesso!
+2023-02-26 17:23:01 DEBUG LinkedList.c:42: no(data,next): 0x5632a17b6700(0x5632a17b66e0,(nil))
+2023-02-26 17:23:01 TRACE LinkedList.c:43: enqueue <-
+2023-02-26 17:23:01 INFO  LinkedList.c:17: Adicionando no final da fila
+2023-02-26 17:23:01 TRACE LinkedList.c:18: enqueue ->
+2023-02-26 17:23:01 INFO  LinkedList.c:110: Verificando se a lista está vazia
+2023-02-26 17:23:01 TRACE LinkedList.c:111: isEmpty ->
+2023-02-26 17:23:01 DEBUG LinkedList.c:117: list->size: 1
+2023-02-26 17:23:01 TRACE LinkedList.c:118: isEmpty <-
+2023-02-26 17:23:01 DEBUG LinkedList.c:32: (aux, aux->next): (0x5632a17b6700, (nil))
+2023-02-26 17:23:01 DEBUG LinkedList.c:38: (aux, aux->next): (0x5632a17b6700, 0x5632a17b6740)
+2023-02-26 17:23:01 INFO  LinkedList.c:41: Dado inserido com sucesso!
+2023-02-26 17:23:01 DEBUG LinkedList.c:42: no(data,next): 0x5632a17b6740(0x5632a17b6720,(nil))
+2023-02-26 17:23:01 TRACE LinkedList.c:43: enqueue <-
+2023-02-26 17:23:01 INFO  LinkedList.c:68: Retornando o primeiro elemento da lista
+2023-02-26 17:23:01 TRACE LinkedList.c:69: first ->
+2023-02-26 17:23:01 INFO  LinkedList.c:110: Verificando se a lista está vazia
+2023-02-26 17:23:01 TRACE LinkedList.c:111: isEmpty ->
+2023-02-26 17:23:01 DEBUG LinkedList.c:117: list->size: 2
+2023-02-26 17:23:01 TRACE LinkedList.c:118: isEmpty <-
+2023-02-26 17:23:01 DEBUG LinkedList.c:74: Endereço do primeiro dado: 0x5632a17b66e0
+2023-02-26 17:23:01 TRACE LinkedList.c:75: first <-
+2023-02-26 17:23:01 INFO  LinkedList.c:81: Retornando o último elemento da lista
+2023-02-26 17:23:01 TRACE LinkedList.c:82: last ->
+2023-02-26 17:23:01 INFO  LinkedList.c:110: Verificando se a lista está vazia
+2023-02-26 17:23:01 TRACE LinkedList.c:111: isEmpty ->
+2023-02-26 17:23:01 DEBUG LinkedList.c:117: list->size: 2
+2023-02-26 17:23:01 TRACE LinkedList.c:118: isEmpty <-
+2023-02-26 17:23:01 DEBUG LinkedList.c:86: (*aux, list->first): (0x5632a17b6700, 0x5632a17b6700)
+2023-02-26 17:23:01 DEBUG LinkedList.c:91: (data, aux->data): (0x5632a17b6720, 0x5632a17b6720)
+2023-02-26 17:23:01 TRACE LinkedList.c:93: first <-
+>>>>>>> d488c5f (Salvando para o pull)

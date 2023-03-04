@@ -87,11 +87,15 @@ void* last(LinkedList *list) {
 		while (aux->next != NULL){
 			aux = aux->next;
 		}
-	data = aux->data;
-	log_debug("(data, aux->data): (%p, %p)", data, aux->data);
+	    data = aux->data;
+	    log_debug("(data, aux->data): (%p, %p)", data, aux->data);
 	}
+<<<<<<< HEAD
 	log_debug("Endereço do último dado: %p", data);
 	log_trace("last <-");
+=======
+    log_trace("first <-");
+>>>>>>> d488c5f (Salvando para o pull)
 	return data;
 }
 
