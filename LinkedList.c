@@ -65,7 +65,7 @@ void* dequeue(LinkedList *list) {
 }
 
 void* first(LinkedList *list) {
-	log_info("Retornando o elemento dado da lista");
+	log_info("Retornando o primeiro elemento da lista");
 	log_trace("first ->");
 	if (isEmpty(list)) {
 		log_warn("Não há elementos na lista para retornar o primeiro dado");
@@ -78,18 +78,19 @@ void* first(LinkedList *list) {
 }
 
 void* last(LinkedList *list) {
-	log_info("Retornando o primeiro elemento da lista");
+	log_info("Retornando o último elemento da lista");
 	log_trace("last ->");
 	void *data = NULL;
 	if (!isEmpty(list)) {
 		Node *aux = list->first;
 		log_debug("(*aux, list->first): (%p, %p)", aux, list->first);
-		while (aux->next !NULL){
+		while (aux->next != NULL){
 			aux = aux->next;
 		}
-	data = aux->data;
-	log_debug("(data, aux->data): (%p, %p)", data, aux->data);
+	    data = aux->data;
+	    log_debug("(data, aux->data): (%p, %p)", data, aux->data);
 	}
+    log_trace("first <-");
 	return data;
 }
 

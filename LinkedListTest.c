@@ -19,6 +19,7 @@ int main() {
 	*numero = 20;
 	enqueue(&lista, numero);
 	first(&lista);
+	last(&lista);
     //printf("%d\n", *((int*)dequeue(&lista)));
     //printf("%d\n", *((int*)dequeue(&lista)));
     //dequeue(&lista);
