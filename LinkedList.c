@@ -90,12 +90,38 @@ void* last(LinkedList *list) {
 	    data = aux->data;
 	    log_debug("(data, aux->data): (%p, %p)", data, aux->data);
 	}
+<<<<<<< HEAD
     log_trace("first <-");
+=======
+<<<<<<< HEAD
+	log_debug("Endereço do último dado: %p", data);
+	log_trace("last <-");
+=======
+    log_trace("first <-");
+>>>>>>> d488c5f (Salvando para o pull)
+>>>>>>> 84590f2
 	return data;
 }
 
 int push(LinkedList *list, void *data) {
-	return 0;
+	log_info("Inserindo no topo da pilha");
+	log_trace("push ->");
+	Node *newNode = (Node*) malloc(sizeof(Node));
+	if (newNode==NULL) {
+		
+		return -1;}
+	newNode->data = data;
+	newNode->next = NULL;
+	if (isEmpty(list)){
+		list->first = newNode;
+	}
+	else{
+		newNode->next = list->first;
+		list->first = newNode;
+	}
+    list->size++;
+	log_trace("push <-");
+	return 1;
 }
 
 void* pop(LinkedList *list) {

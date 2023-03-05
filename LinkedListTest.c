@@ -24,6 +24,7 @@ int main() {
     //printf("%d\n", *((int*)dequeue(&lista)));
     //dequeue(&lista);
 
+
 				
 
 	return EXIT_SUCCESS;
