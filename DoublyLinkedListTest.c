@@ -29,9 +29,9 @@ int main() {
     aux = (int *)malloc(sizeof(int));
     *aux=3;
     enqueue(&list, aux);
-
     dequeue(&list);
-
+    first(&list);
+    last(&list);
     /*show(&list,impressao);
     showMem(&list);
 

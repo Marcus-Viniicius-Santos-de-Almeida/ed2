@@ -62,10 +62,18 @@ void* dequeue(DoublyLinkedList *list) {
 }
 
 void* first(DoublyLinkedList *list) {
+    log_info("Consultando o primeiro da fila");
+    log_trace("first ->");
+    log_debug("Data: %p", list->first->next->data);
+    log_trace("first <-");
     return list->first->next->data;
 }
 
 void* last(DoublyLinkedList *list) {
+    log_info("Consultando o último da fila");
+    log_trace("last ->");
+    log_debug("Data: %p", list->first->previous->data);
+    log_trace("last <-");
     return list->first->previous->data;
 }
 
@@ -92,6 +100,8 @@ void* top(DoublyLinkedList *list) {
 bool isEmpty(DoublyLinkedList *list) {
     log_info("Verificando se a lista está vazia");
     log_trace("isEmpty ->");
+    if (list->size==0) log_info("Lista vazia");
+    else log_info("A lista não está vazia");
     log_trace("isEmpty <-");
     return (list->size==0);
 }
