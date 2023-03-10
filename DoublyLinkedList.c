@@ -22,7 +22,7 @@ void init(DoublyLinkedList *list) {
 
 int enqueue(DoublyLinkedList *list, void *data) {
     log_info("Inserindo no final da lista");
-    log_trace("enqueue ->");
+    log_trace("enqueue ->"); 
     Node *newNode = (Node*)malloc(sizeof(Node));
     if (newNode==NULL) return -1;
     newNode->data = data;
