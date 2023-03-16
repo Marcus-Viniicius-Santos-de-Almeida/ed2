@@ -56,6 +56,20 @@ doublylinkedlist:
 	@echo
 	./doublylinkedlist
 
+generalizedlinkedlist:
+	@echo
+	@echo ==========================
+	@echo      LISTA GENERALIZADA
+	@echo ==========================
+	@echo Compilando o programa generalizedlinkedlist
+	gcc --std=c99 -DLOG_USE_COLOR log.h log.c GeneralizedLinkedList.h GeneralizedLinkedList.c GeneralizedLinkedListTest.c -o generalizedlinkedlist
+	@echo Tornando o arquivo executável
+	chmod +x generalizedlinkedlist
+	@echo Executando o programa generalizedlinkedlist
+	@echo ======================================================
+	@echo
+	./generalizedlinkedlist
+
 clean:
 	@echo
 	@echo ==========================
@@ -69,3 +83,5 @@ clean:
 	rm -f linkedlist
 	@echo Removendo o programa doublylinkedlist
 	rm -f doublylinkedlist
+	@echo Removendo o programa generalizedlinkedlist
+	rm -f generalizedlinkedlist
