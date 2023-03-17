@@ -10,31 +10,46 @@ int addAtom(Node **list, int atom){
    no->type = 0;
    no->atomList.atom = atom;
    no->tail = NULL;
-   list->tail = *no;
+
+   if(*list == NULL){
+      *list = no;
+   }
+   else {
+      Node *aux = NULL;
+      for (aux = *list; aux->tail!=NULL; aux=aux->tail);
+      aux->tail = no;
+   }
+
    return 1;
 }
 
-/*void showGeneralizedList(Node *list){
+void showGeneralizedList(Node *list){
     Node *aux = (Node*)malloc(sizeof(Node));
-    if (aux==NULL) return -1;
+    if (list==NULL) return -1;
     aux = list;
-    while (aux != NULL){
+    while (list != NULL){
       if(aux->atomList.atom != NULL){
-         printf("Atom: %d", aux->atomList.atom);
-      }
-      else if (aux->atomList->list){
-         printf("", aux->atomList-);
+         print(aux->atomList.atom);
       }
     }
     return NULL;
-}*/
+}
 
 int addList(Node **list, Node **subList){
     Node *no = (Node*)malloc(sizeof(Node));
    if(no==NULL) return -1;
    no->type = 1;
-   no->atomList->list = subList->list;
+   no->atomList.list = *subList;
    no->tail = NULL;
-   list->tail = *no;
+
+    if(*list == NULL){
+      *list = no;
+   }
+   else {
+      Node *aux = NULL;
+      for (aux = *list; aux->tail!=NULL; aux=aux->tail);
+      aux->tail = no;
+   }
+
    return 1;
 }
