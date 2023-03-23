@@ -40,7 +40,7 @@ int main() {
     
     printf("\nLista: ");
     showGeneralizedList(listaGeneralizada);
-    printf("\nProfundidade: %d\n",depth(listaGeneralizada));
+    /*printf("\nProfundidade: %d\n",depth(listaGeneralizada));
     
     printf("\nTail: ");
     showGeneralizedList(tail(listaGeneralizada));
@@ -53,6 +53,6 @@ int main() {
     printf("\n\nLista: ");
     showGeneralizedList(head(tail(tail(listaGeneralizada))));
     printf("\nProfundidade: %d\n",depth(head(tail(tail(listaGeneralizada)))));
-    
+    */
     return 0;
 }

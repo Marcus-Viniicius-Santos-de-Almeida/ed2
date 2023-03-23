@@ -25,14 +25,18 @@ int addAtom(Node **list, int atom){
 
 void showGeneralizedList(Node *list){
     Node *aux = (Node*)malloc(sizeof(Node));
-    if (list==NULL) return -1;
     aux = list;
-    while (list != NULL){
-      if(aux->atomList.atom != NULL){
-         print(aux->atomList.atom);
+    printf("(");
+    while (aux != NULL){
+      if(aux->type == 0){
+         printf("%d,", aux->atomList.atom);
       }
+      else if(aux->type == 1){
+         showGeneralizedList(aux->atomList.list);
+      }
+      aux=aux->tail;
     }
-    return NULL;
+    printf(")");
 }
 
 int addList(Node **list, Node **subList){
