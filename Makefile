@@ -70,6 +70,19 @@ generalizedlinkedlist:
 	@echo
 	./generalizedlinkedlist
 
+hash:
+	@echo
+	@echo ==========================
+	@echo      TABELA HASH
+	@echo ==========================
+	@echo Compilando o programa hash
+	gcc --std=c99 -DLOG_USE_COLOR log.h log.c Hash.h Hash.c HashTest.c -o hash
+	@echo Tornando o arquivo executável
+	chmod +x hash
+	@echo Executando o programa hash
+	@echo ======================================================
+	@echo
+	./hash
 clean:
 	@echo
 	@echo ==========================
@@ -85,3 +98,5 @@ clean:
 	rm -f doublylinkedlist
 	@echo Removendo o programa generalizedlinkedlist
 	rm -f generalizedlinkedlist
+	@echo Removendo o programa hash
+	rm -f hash
