@@ -30,7 +30,6 @@ void printInteger(void *data) {
 int main(int argc, char **argv) {
     TreeNode *tree = NULL;
     BinarySearchTreeElement *el, findEl;
-    // Adiciona alguns elementos
     el = (BinarySearchTreeElement *) malloc(sizeof(BinarySearchTreeElement));
     assert(el != NULL);
     el->key = 45;
@@ -65,8 +64,8 @@ int main(int argc, char **argv) {
     assert(el != NULL);
     el->key = 48;
     snprintf(el->value, 10, "Val 48");
-    assert(add(tree, el, &BinarySearchTreeElementComparator, &tree) == 1);
-    assert(add(tree, el, &BinarySearchTreeElementComparator, &tree) == -1);
+    assert(add(&tree, el, &BinarySearchTreeElementComparator) == 1);
+    assert(add(&tree, el, &BinarySearchTreeElementComparator) == -1);
     findEl.key = 50;
     assert(find(tree, (void *) &findEl, &BinarySearchTreeElementComparator,
         (void **) &el) == 1);
