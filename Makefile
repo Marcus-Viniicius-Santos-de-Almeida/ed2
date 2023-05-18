@@ -1,4 +1,4 @@
-all: clean ponteiro ponteiro_duplo linkedlist doublylinkedlist
+all: clean ponteiro ponteiro_duplo linkedlist doublylinkedlist BinarySearchTree
 
 ponteiro:
 	@echo
@@ -83,6 +83,20 @@ hash:
 	@echo ======================================================
 	@echo
 	./hash
+
+BinarySearchTree:
+	@echo
+	@echo ==========================
+	@echo      Árvore Binária
+	@echo ==========================
+	@echo Compilando o programa BinarySearchTree
+	gcc --std=c99 -DLOG_USE_COLOR log.h log.c BinarySearchTree.h BinarySearchTree.c BinarySearchTreeTest.c -o BinarySearchTree
+	@echo Tornando o arquivo executável
+	chmod +x BinarySearchTree
+	@echo Executando o programa BinarySearchTree
+	@echo ======================================================
+	@echo
+	./BinarySearchTree
 clean:
 	@echo
 	@echo ==========================
@@ -100,3 +114,5 @@ clean:
 	rm -f generalizedlinkedlist
 	@echo Removendo o programa hash
 	rm -f hash
+	@echo Removendo o programa BinarySearchTree
+	rm -f BinarySearchTree
