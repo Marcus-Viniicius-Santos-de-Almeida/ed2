@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "log.h"
+#include <stdbool.h>
 
 
 
@@ -16,6 +17,24 @@ Agrupar{
 
 }*/
 
+bool compara(SIMBOLO *symbols1, SIMBOLO *symbols2, int c) {
+    int f;
+    for(int i=0; i<=c, i++)[
+        f = 0;
+        for(int j=0; j<=c; j++)[
+            if(symbols1[i].symbol==symbols2[j].symbols)[
+                f++;
+            ]
+        ]
+    ]
+ 
+    
+    
+    char *d1 = data1;
+    char *d2 = data2;
+    return (*d1==*d2)?true:false;
+}
+
 typedef struct simbolo{
     char symbol;
     int frequencia;
@@ -24,31 +43,50 @@ typedef struct simbolo{
 }SIMBOLO;
 
 int main(int argc, char* argv[]){
-    int k, c;
-    int t = 0;
+    int k;
+    int c;
     char ch, NomeArq[255], SC;
-    SIMBOLO *symbols = (SIMBOLO *)malloc(sizeof(SIMBOLO)*99999999);
     //printf("Digite o nome do arquivo: ");
     //scanf("%s", &NomeArq[k]);
     FILE *Arquivo = fopen(argv[1], "r");
-    int i = 0;
+    int i = 1;
+    c=0;
+
+       while(!feof(Arquivo)){
+        ch = fgetc(Arquivo);
+        c++;
+        printf("%d ", c);
+    }
+    SIMBOLO *symbolsF = (SIMBOLO *)malloc(sizeof(SIMBOLO)*c);
+    fseek(Arquivo, 0, SEEK_SET);
+
     while(!feof(Arquivo)){
-        c = 0;
-        SC = '\0';
-        SC = fgetc(Arquivo);
-        while(symbols[t]!=NULL){
-            if(symbols[t].symbol==SC){
-            c++;
-            t++;
+        ch = fgetc(Arquivo);
+         printf("%c ", ch);
+
+        //symbols[i].symbol = fgetc(Arquivo);
+        //printf("%c ", symbols[i].symbol);
+        i++;
+    } 
+    
+
+    /*int s = i;
+    //symbolsV[x].symbol=symbolsF[int ('')+1];
+    SIMBOLO *symbolsV = (SIMBOLO *)malloc(sizeof(SIMBOLO)*i);
+    for(int g=0; g<=i; g++){
+        c=0;
+        for(int h=0; h<=s; h++){
+            if(compara(symbolsF[g].symbol, symbolsV[h].symbol)){
+                c++;
             }
         }
-        if (c==0){
-            symbols[i].symbol = SC;
+    }*/
+
+    /*for(int d=0; d<=i; d++){
+        if(symbolsF[d].symbol==symbolsV[d].symbol){
+            if
         }
-        printf("%c ", symbols[i].symbol);
-        i++;
-    }
-        
+    }*/
     
 
     /*for(int j=0; j<=i; j++){
